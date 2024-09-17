@@ -5,11 +5,10 @@ import { ItemDetailCard } from "@/components/item-detail/item-detail-card";
 import { Image } from "@nextui-org/image";
 
 export default async function ItemPage({ params }: { params: { id: string } }) {
-  // console.log("page params", params);
-  // const res = await fetch(
-  //   `https://rickandmortyapi.com/api/character/${params.id}`
-  // );
-  // const data = await res.json();
+  const res = await fetch(
+    `https://rickandmortyapi.com/api/character/${params.id}`
+  );
+  const data = await res.json();
   const mychardata = {
     id: 2,
     name: "Morty Smith",
@@ -57,8 +56,7 @@ export default async function ItemPage({ params }: { params: { id: string } }) {
       "https://rickandmortyapi.com/api/episode/29",
     ],
   };
-  const { id, name, image, episode } = mychardata;
-  // console.log("char data", data);
+  const { id, name, image } = data;
   return (
     <div className="grid grid-cols-[70%_30%] w-full ">
       <div className="col-span-1 grid grid-cols-[50%_50%] w-full">

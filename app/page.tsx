@@ -4,9 +4,9 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 
 export default async function Home() {
-  // const res = await fetch("https://rickandmortyapi.com/api/character");
-  // const data = await res.json();
-  // console.log("data", data);
+  const res = await fetch("https://rickandmortyapi.com/api/character");
+  const data = await res.json();
+  console.log("data", data);
   const mydata = {
     info: {
       count: 826,
@@ -297,7 +297,7 @@ export default async function Home() {
       },
     ],
   };
-  const { results } = mydata;
+  const { results } = data;
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-4 md:py-5">

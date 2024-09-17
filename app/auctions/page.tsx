@@ -9,10 +9,10 @@ export default async function AuctionsPage({
   searchParams?: { [key: string]: string | undefined };
 }) {
   const page = searchParams?.page;
-  // const res = await fetch(
-  //   `https://rickandmortyapi.com/api/character/${page ? `?page=${page}` : ""}`
-  // );
-  // const data = await res.json();
+  const res = await fetch(
+    `https://rickandmortyapi.com/api/character/${page ? `?page=${page}` : ""}`
+  );
+  const data = await res.json();
   // console.log("data", data);
   const mydata = {
     info: {
@@ -304,7 +304,7 @@ export default async function AuctionsPage({
       },
     ],
   };
-  const { results } = mydata;
+  const { results } = data;
   return (
     <div>
       <div className="flex items-start justify-start">

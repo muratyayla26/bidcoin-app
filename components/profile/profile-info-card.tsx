@@ -73,7 +73,7 @@ export const ProfileInfoCard = () => {
                 Email
               </p>
               <p className="text-sm font-normal">
-                {profileData.userInfo.email || "-"}
+                {profileData.userInfo?.email || "-"}
               </p>
             </div>
             <div className="mb-4 flex justify-start items-center">

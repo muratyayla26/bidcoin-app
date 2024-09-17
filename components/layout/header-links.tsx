@@ -52,7 +52,6 @@ export const HeaderLinks = () => {
             as={Link}
             href="/profile"
             isDisabled={isLoading || !web3Auth}
-            isLoading={isLoading}
             color="success"
             className="text-black"
           >
@@ -63,7 +62,6 @@ export const HeaderLinks = () => {
           <Button
             onClick={triggerLogin}
             isDisabled={isLoading || !web3Auth}
-            isLoading={isLoading}
             color="success"
             className="text-black"
           >
